@@ -1,4 +1,4 @@
->**因为工作需要Ajax轮询，所以用Flask实现了 Ajax异步加载、Ajax轮询。分别写个简单的小例子简要总结一下
+> 因为工作需要Ajax轮询，所以用Flask实现了 Ajax异步加载、Ajax轮询。分别写个简单的小例子简要总结一下
 
 ### Ajax
 AJAX = Asynchronous JavaScript and XML（异步的 JavaScript 和 XML）。
@@ -88,6 +88,6 @@ setInterval() 方法可按照指定的周期（以毫秒计）来调用函数或
 
 **以上程序运行效果为：点一次add链接，值就一直就加1**
 
-**效果图：**
+
 ![](http://oumkbl9du.bkt.clouddn.com/2017-09-08-2GG8A-ajax.png)
 
