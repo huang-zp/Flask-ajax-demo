@@ -1,0 +1,40 @@
+
+<script>window.jQuery || document.write('<script src="{{ url_for('static', filename='jquery.js') }}">\x3C/script>')</script>
+
+<script type=text/javascript>
+  $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+ $(function() {
+    $('a#add1').bind('click', function() {
+      $.getJSON($SCRIPT_ROOT + '/add', {
+        num: $('#result1').text()
+      }, function(data) {
+        $("#result1").text(data);
+      });
+      return false;
+    });
+  });
+
+</script>
+
+<script type=text/javascript>
+  $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+  function GetState() {
+      $.getJSON($SCRIPT_ROOT + '/add', {
+            num: $('#result2').text()
+          }, function(data) {
+        $("#result2").text(data);
+      });
+    };
+
+$(function() {
+  $('a#add2').bind('click', function(){
+          setInterval("GetState()", 1000);
+  })
+  });
+</script>
+
+<span id=result1>1</span>
+<a href=# id=add1>点一加一</a>
+
+<span id=result2>1</span>
+<a href=# id=add2>点一不停加一</a>
